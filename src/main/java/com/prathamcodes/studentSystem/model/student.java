@@ -2,21 +2,18 @@ package com.prathamcodes.studentSystem.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+public class student {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int id;
+private String name;
+private String address;
 
-public class Student {
-
-    @Id
-    @GeneratedValue
-
-    private int id;
-    private String name;
-    private String address;
-
-    public Student() {
-
+    public student() {
     }
 
     public int getId() {
