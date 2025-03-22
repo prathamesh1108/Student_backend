@@ -33,6 +33,7 @@ public class  studentServiceimpl implements studentService {
         return studentRepository.findById(id).map(existingStudent -> {
             existingStudent.setName(updatedStudent.getName());
             existingStudent.setAddress(updatedStudent.getAddress());
+            existingStudent.setEmail(updatedStudent.getEmail());
             return studentRepository.save(existingStudent);
         });
     }
